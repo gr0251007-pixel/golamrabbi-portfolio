@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golam Rabbi - Visualizer & Video Editor</title>
+    <meta name="description" content="Official portfolio of Golam Rabbi, Visualizer & Video Editor. Cutting raw moments into timeless stories." />
+    <meta property="og:title" content="Golam Rabbi - Visualizer & Video Editor" />
+    <meta property="og:description" content="Official portfolio of Golam Rabbi, Visualizer & Video Editor. Cutting raw moments into timeless stories." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      // Prevent extensions or polyfills from throwing when setting window.fetch as a getter
+      (function() {
+        try {
+          var desc = Object.getOwnPropertyDescriptor(window, 'fetch');
+          if (desc && !desc.writable && !desc.set) {
+            var origFetch = window.fetch;
+            Object.defineProperty(window, 'fetch', {
+              get: function() { return origFetch; },
+              set: function(fn) { origFetch = fn; },
+              configurable: true,
+              enumerable: true
+            });
+          }
+        } catch (e) {
+          // ignore
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-[#0b0807] text-neutral-100 antialiased selection:bg-orange-500 selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
